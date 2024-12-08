@@ -32,7 +32,7 @@ def main():
     'HasCrCard': [HasCrcard], 
     'IsActiveMember': [IsActiveMember],
     'EstimatedSalary': [EstimatedSalary] 
-})
+        
     })
     if st.button("Predict"):
         with st.spinner('Calculating...'):  # Display a spinner while predicting
