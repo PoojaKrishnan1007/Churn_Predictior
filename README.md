@@ -1,7 +1,8 @@
 **CHURN PREDICTION MODEL**
 
  *Introduction*
- A churn predictor algorithm assists in predicting if the bank's customer will leave the bank or not by considering other demographic factors. The dataset for this system includes the following columns:
+ 
+A churn predictor algorithm assists in predicting if the bank's customer will leave the bank or not by considering other demographic factors. The dataset for this system includes the following columns:
 
  *Input*
 
@@ -19,7 +20,7 @@
 12. EstimatedSalary: as with balance, people with lower salaries are more likely to leave the bank compared to those with higher salaries.
 13. Exited: whether or not the customer left the bank. (Yes = 1, No = 0)
 
-*Model Details*
+ *Model Details*
  
 The dataset is taken from https://www.kaggle.com/code/simgeerek/churn-prediction-using-machine-learning/input. The features considered to build a MI model are CreditScore, Geography, Gender, Age, Tenure, Balance, 
 NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary.
