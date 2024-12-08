@@ -6,6 +6,10 @@ import os
 
 model_path = os.path.join(os.path.dirname(__file__), 'Churn_prediction_model')
 model = joblib.load(model_path)
+# Reverse encoding dictionaries
+geography_mapping = {0: "France", 1: "Spain", 2: "Germany"}
+gender_mapping = {0: "Female", 1: "Male"}
+
 def main():
     st.title("Churn Predictor Model")
     # Create input fields for features
