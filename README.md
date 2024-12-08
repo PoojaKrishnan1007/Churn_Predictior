@@ -35,14 +35,17 @@ NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary.
 *Business Questions*
 
 1. How does the credit score and the other demographic factors of the customers vary?
+
 Graphs have been plotted to show the variations in customers' credit score, age, gender, and geography.
 Based on the results, it is concluded that both genders have almost the same average credit score.
 Additionally, customers from France in the age group of 40–50 are the most numerous among all the bank's customers.
 
 2. How does customer tenure and account balance affect the customer churn?
+
 A Correlation matrix has been plotted to check the relationship between each feature, and it is clearly visible that Tenure is negatively correlated, while Balance is positively correlated with customer churn.
 
 3. How does the churn prediction model utilize customer activity and product usage patterns to forecast churn?
+
 To forecast churn, the model utilizes various features, such as the client's geography. If the client is located near the bank, they are more likely to have an account, and this also depends on the country's policies.
 The tenure and age of the customer are also important factors; the longer a client stays with the bank, the more familiar they are with the processes and the more likely they are to remain. On the other hand, older customers, whose income may have stopped, are more likely to close their accounts.
 The number of products a customer has also plays a significant role in churn, as customers who have benefited from more products are more likely to stay.
