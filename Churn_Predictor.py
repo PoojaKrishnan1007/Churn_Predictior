@@ -13,16 +13,18 @@ gender_mapping = {0: "Female", 1: "Male"}
 def main():
     st.title("Churn Predictor Model")
     # Create input fields for features
-    CreditScore = st.number_input("Credit Score")
-    Geography = st.number_input("Geography")
-    Gender = st.number_input("Gender")
-    Age = st.number_input("Age")
-    Tenure = st.number_input("Tenure")
-    Balance = st.number_input("Balance")
-    NumOfProducts = st.number_input("Number of Products")
-    HasCrCard = st.number_input("Has Credit Card")
-    IsActiveMember = st.number_input("Is Active Member")
-    EstimatedSalary = st.number_input("Estimated Salary")
+    CreditScore = st.number_input("Credit Score", min_value=300, max_value=900, step=1)
+    Geography = st.selectbox("Geography", options=list(geography_mapping.keys()), 
+                             format_func=lambda x: geography_mapping[x])
+    Gender = st.selectbox("Gender", options=list(gender_mapping.keys()), 
+                          format_func=lambda x: gender_mapping[x])
+    Age = st.number_input("Age", min_value=18, max_value=100, step=1)
+    Tenure = st.number_input("Tenure", min_value=0, max_value=10, step=1)
+    Balance = st.number_input("Balance", min_value=0.0, step=0.01)
+    NumOfProducts = st.number_input("Number of Products", min_value=1, max_value=4, step=1)
+    HasCrCard = st.selectbox("Has Credit Card", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
+    IsActiveMember = st.selectbox("Is Active Member", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
+    EstimatedSalary = st.number_input("Estimated Salary", min_value=0.0, step=0.01)
         
     # Create a dataframe from the input values
     input_data = pd.DataFrame({
