@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import os
 
-model_path = os.path.join(os.path.dirname(__file__), 'ChurnPrediction')
+model_path = os.path.join(os.path.dirname(__file__), 'Churn_prediction_model')
 model = joblib.load(model_path)
 def main():
     st.title("Churn Predictor Model")
@@ -29,7 +29,7 @@ def main():
     'Tenure': [Tenure],
     'Balance' : [Balance],
     'NumOfProducts': [NumOfProducts], 
-    'HasCrCard': [HasCrcard], 
+    'HasCrCard': [HasCrCard], 
     'IsActiveMember': [IsActiveMember],
     'EstimatedSalary': [EstimatedSalary] 
         
